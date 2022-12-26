@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+    </script>
+</head>
+<body onload="showlvl()">
+    <div class="cover" id="lvlcover"></div>
+        <div class="header" id="lvltitle"></div>
+        <div class="main">
+            <div class="area1">
+                <div class="dragZone">
+                    <div class="draggable" id="available1" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="draggable" id="available2" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="draggable" id="available3" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="draggable" id="available4" draggable="true" ondragstart="drag(event)"></div>
+                    <div class="draggable" id="available5" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </div>
+            <div class="area2">
+                <div class="parent">
+                    <div id="box1" class="droppable" ondrop="drop(event, 1)"></div>
+                    <div id="box2" class="droppable" ondrop="drop(event, 2)"></div>
+                    <div id="box3" class="droppable" ondrop="drop(event, 3)"></div>
+                    <div id="box4" class="droppable" ondrop="drop(event, 4)"></div>
+                    <div id="box5" class="droppable" ondrop="drop(event, 5)"></div>
+                    <div id="box6" class="droppable" ondrop="drop(event, 6)"></div>
+                    <div id="box7" class="droppable" ondrop="drop(event, 7)"></div>
+                    <div id="box8" class="droppable" ondrop="drop(event, 8)"></div>
+                    <div id="box9" class="droppable" ondrop="drop(event, 9)"></div>
+                </div>
+                <div class="result1">
+                    <button class="submit" onclick="check()">=</button>
+                </div>
+                <div class="result2">
+                    <div id="res"></div>
+                </div>
+            </div>
+            <div class="area3" id="ar3">
+                <div class="comment">
+                    <div id="comment1">Highscore : &nbsp; <span id="highmin">00</span>:<span id="highsec">00</span></div>
+                </div>
+                <div class="tips">
+                    <button type="button" class="tipsbtn" onclick="displayTips()"></button>
+                    <div class="hint" id="hint">test</div>
+                </div>
+                <div class="back">
+                    <button type="button"  class="backbtn" onclick="restart()">RESTART</button>
+                    <button type="button" class="backbtn" onclick="backtoMenu()">BACK TO MAIN MENU</button> 
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popupmsg">
+            <h1 id="msg1">Congratulation</h1>
+            <div class="msg" id="msg2">You nailed it!</div> 
+            <div class="btn">
+                <button type="button"  class="backbtn" id="restartbtn" onclick="restart()">RESTART</button>
+                <button type="button"  class="backbtn" onclick="backtoMenu()">BACK TO MAIN MENU</button> 
+            </div>
+            
+        </div>
+
+    <script src="function.js"></script>
+</body>
+</html>
