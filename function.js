@@ -5,7 +5,7 @@ if(localStorage.getItem('secScore') == null){
     localStorage.setItem('secScore', '00');
 }
 if(localStorage.getItem('minScore') == null){
-    localStorage.setItem('secScore', '00');
+    localStorage.setItem('minScore', '00');
 }
 
 // =================================================================//
@@ -322,7 +322,6 @@ function showlvl(){
     if(index == 0){
         document.querySelector('.comment').classList.add("display");
         document.getElementById('lvltitle').innerHTML = "<span id='minute'>00</span> &nbsp;:&nbsp; <span id='sec'>00</span>";
-        stopwatch();
 
         // if(localStorage.getItem('minScore') > 0 || localStorage.getItem('secScore') > 0){
             document.getElementById('highmin').innerHTML = localStorage.getItem('minScore');
@@ -354,6 +353,9 @@ function showlvl(){
         let wantedRes = calculate(recNum[0],recNum[1],recNum[2],recNum[3],recNum[4],recOp[0],recOp[1],recOp[2],recOp[3]);
 
         setUp(recNum[0], recNum[1], recNum[2], recNum[3], recNum[4], recOp[0], recOp[1], recOp[2], recOp[3], wantedRes);
+        setTimeout(function(){
+            stopwatch();
+        }, 2000);
     }
     else{
         document.querySelector('.tipsbtn').classList.add("display");
