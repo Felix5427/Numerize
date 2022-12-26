@@ -300,7 +300,7 @@ function backtoMenu(){
     document.getElementById('popupmsg').classList.remove("open-popup");
     document.getElementById('lvlcover').classList.add("coverup");
     setTimeout(function(){
-        location.replace('main.html');
+        location.replace('Numerize/main.html');
     },2000);
 }
 
@@ -308,7 +308,7 @@ function gotolvl(index){
     closePopup();
     document.getElementById('cover').classList.add("coverup");
     setTimeout(function(){
-        location.replace('/level.html');
+        location.replace('Numerize/level.html');
         localStorage.setItem("lvlindex", index);
     },2000);
 }
